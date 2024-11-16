@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from ninja import NinjaAPI, Schema, Response
-from ninja.responses import JSONResponse
+from ninja import NinjaAPI, Schema
+from ninja.responses import JsonResponse
 
 api = NinjaAPI()
 
 
 @api.get("/test")
 def test(request):
-    return JSONResponse({"message": "Hello, World!"})
+    return JsonResponse({"message": "Hello, World!"})
