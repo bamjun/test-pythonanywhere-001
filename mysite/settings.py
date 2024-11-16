@@ -35,17 +35,16 @@ if check_local == 'true':
     ALLOWED_HOSTS += ['localhost', '127.0.0.1']
 
 
+DEFAULT_APPS = ['django.contrib.admin',
+                'django.contrib.auth',
+                'django.contrib.contenttypes',
+                'django.contrib.sessions',
+                'django.contrib.messages',
+                'django.contrib.staticfiles',]
 
-# Application definition
+CUSTOM_APPS = ['a_apis.apps.AApisConfig']
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-]
+INSTALLED_APPS = DEFAULT_APPS + CUSTOM_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
